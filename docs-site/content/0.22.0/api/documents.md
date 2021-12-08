@@ -1697,7 +1697,11 @@ Use the `batch_size` parameter to control the number of documents that should de
   <template v-slot:JavaScript>
 
 ```js
+// returns a string containing all the documents
 client.collections('companies').documents().export()
+
+// returns a NodeJS readable stream that can be piped to a file
+client.collections('companies').documents().exportStream()
 ```
 
   </template>
